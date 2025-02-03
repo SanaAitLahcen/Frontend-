@@ -1,0 +1,73 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.maze {
+  display: grid;
+  gap: 2px;
+  background-color: #ccc;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+}
+
+.cell.wall {
+  background-color: black; /* Les murs */
+}
+
+.cell.path {
+  background-color: white; /* Les chemins */
+}
+
+.cell.start {
+  background-color: green; /* Point de départ */
+}
+
+.cell.end {
+  background-color: red; /* Point d'arrivée */
+}
+
+.cell.path-cell {
+  background-color: rgb(9, 77, 224); /* Chemin parcouru */
+}
+
+
+.path-cell {
+  background-color: #0f0; /* Couleur du chemin (vert) */
+}
+
