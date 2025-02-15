@@ -1,73 +1,102 @@
-.app {
+/* Nouvelle navbar */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: start; /* Aligner les boutons à gauche */
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
-  margin-top: 20px;
+  background-color: #333;
+  padding: 10px;
+  gap: 10px; /* Espacement entre les éléments */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.controls {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.button {
-  padding: 10px 20px;
-  background-color: black;
+/* Ajustement des boutons et de la liste déroulante */
+.navbar .button, .navbar {
+  background-color: #555;
   color: white;
-  border: none;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .dropdown {
+  background-color: #4dc76d;
+  color: white;
+  font-weight: bold;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: none;
+  cursor: pointer;
   border-radius: 5px;
 }
 
+.navbar .button:hover {
+  background-color: #4dc76d;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Désactive le défilement */
+  height: 100%; /* Prend toute la hauteur de la fenêtre */
+  width: 100%; /* Prend toute la largeur de la fenêtre */
+  background-color: grey; 
+}
+/* Ajustement de l'interface pour éviter le chevauchement */
+.app {
+  background-color: #777;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin-top: 60px; /* Pour éviter que le labyrinthe ne soit caché sous la navbar */
+}
+
+/* Mise à jour du labyrinthe */
 .maze {
   display: grid;
-  gap: 2px;
-  background-color: #ccc;
+  justify-content: center; /* Centrer le labyrinthe */
+  padding: 10px;
+  background-color: #777;
+  position:fixed;
+  top: 55px;
+
 }
 
-.row {
-  display: flex;
-}
-
+/* Styles des cellules */
 .cell {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #ddd;
+  width: 30px;
+  height: 25px;
+  border: 1px solid #ccc;
 }
 
 .cell.wall {
-  background-color: black; /* Les murs */
+  background-color: black;
 }
 
 .cell.path {
-  background-color: white; /* Les chemins */
+  background-color: white;
 }
 
 .cell.start {
-  background-color: green; /* Point de départ */
+  background-color: green;
 }
 
 .cell.end {
-  background-color: red; /* Point d'arrivée */
+  background-color: red;
 }
 
 .cell.path-cell {
-  background-color: rgb(9, 77, 224); /* Chemin parcouru */
+  background-color:#e9791a !important;
 }
 
-
-.path-cell {
-  background-color: #0f0; /* Couleur du chemin (vert) */
+.visited {
+  background-color: #2196f3 !important;
 }
-
